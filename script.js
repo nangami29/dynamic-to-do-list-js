@@ -6,7 +6,7 @@ const taskInput = document.getElementById(id="task-input")
 const taskList = document.getElementById(id="task-list")
 //create the addTask function
 function addTask (){
-    let taskTest =inputField.value.trim();
+    let taskTest =taskInput.value.trim();
 if (taskTest=== ""){
     alert(input('Enter a task'))
 }
