@@ -9,18 +9,21 @@ function addTask (){
     let taskTest =taskInput.value.trim();
 if (taskTest=== ""){
     alert(input('Enter a task'))
+     return;
 }
 // task creation and removal
 const li = document.createElement("li");
 li.textContent = taskText;
-const button =document.createElement('remove-btn');
+const button =document.createElement('button');
 button.textContent='Remove'
+button.classList="remove-btn"
 button.onclick =function(){
-    taskList.remove(li)
+    taskList.removeChild(li);
+   
 };
 // append button to li then li to the list
-li.append(button);
-taskList.append(li);
+li.appendChild(button);
+taskList.appendChild(li);
 taskInput.value=""
 // add event listeners
 addButton.addEventListener('click', addTask);
